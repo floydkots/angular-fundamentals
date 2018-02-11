@@ -1,0 +1,14 @@
+<button
+  class="btn btn-default"
+  (click)="toggleParagraph()"
+>
+  Display Details
+</button>
+<p *ngIf="show && toggles > 0">{{toggles}} Toggles</p>
+<div
+  *ngFor="let log of logs; let i = index"
+  [ngStyle]="{backgroundColor: i > 3 ? 'blue' : 'white'}"
+  [ngClass]="{white: i > 3}"
+>
+  Toggled at {{log}}
+</div>
