@@ -1,0 +1,24 @@
+<div>
+  <h1>Binding Assignment</h1>
+  <hr/>
+  <label>Username
+    <input
+      class="form-control"
+      type="text"
+      name="username"
+      autocomplete="off"
+      [(ngModel)]="username"
+    />
+  </label>
+  <p>
+    {{username}}
+  </p>
+  <button
+    class="btn btn-success"
+    [disabled]="onUsername()"
+    (click)="username = ''"
+  >
+    Reset
+  </button>
+</div>
+
